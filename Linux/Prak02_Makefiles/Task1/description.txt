@@ -1,0 +1,1 @@
+Goal: Create C++ project using a Makefile
