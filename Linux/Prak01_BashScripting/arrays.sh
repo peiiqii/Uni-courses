@@ -19,3 +19,13 @@ echo ${MyArray[3]}
 echo ${MyArray[4]}
 
 echo ${#MyArray[@]}
+
+echo "Print array using loop:"
+for j in ${MyArray[@]}; do
+        echo $j
+done
+
+echo "Print array using loop:"
+for j in "${MyArray[@]}"; do
+        echo $j  
+done
