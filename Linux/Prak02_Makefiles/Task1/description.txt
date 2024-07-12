@@ -1,1 +1,7 @@
-Goal: Create C++ project using a Makefile
+Your task is to create the following C++-project using a Makefile:
+
+Create a static library hello_world.a that contains a function void hello(). This function prints out “Hello World”.
+
+Create the main program main.cpp, that uses the library above and calls the function void hello() at least once.
+
+The Makefile should only contain automatic rules that compile and link the project
