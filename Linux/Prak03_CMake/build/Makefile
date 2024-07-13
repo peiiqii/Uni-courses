@@ -117,6 +117,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named mylibrary
+
+# Build rule for target.
+mylibrary: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 mylibrary
+.PHONY : mylibrary
+
+# fast build rule for target.
+mylibrary/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mylibrary.dir/build.make CMakeFiles/mylibrary.dir/build
+.PHONY : mylibrary/fast
+
+#=============================================================================
 # Target rules for targets named hello_world
 
 # Build rule for target.
@@ -129,29 +142,53 @@ hello_world/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/hello_world.dir/build.make CMakeFiles/hello_world.dir/build
 .PHONY : hello_world/fast
 
-hello_world.o: hello_world.cpp.o
-.PHONY : hello_world.o
+src/MyLibrary.o: src/MyLibrary.cpp.o
+.PHONY : src/MyLibrary.o
 
 # target to build an object file
-hello_world.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/hello_world.dir/build.make CMakeFiles/hello_world.dir/hello_world.cpp.o
-.PHONY : hello_world.cpp.o
+src/MyLibrary.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mylibrary.dir/build.make CMakeFiles/mylibrary.dir/src/MyLibrary.cpp.o
+.PHONY : src/MyLibrary.cpp.o
 
-hello_world.i: hello_world.cpp.i
-.PHONY : hello_world.i
+src/MyLibrary.i: src/MyLibrary.cpp.i
+.PHONY : src/MyLibrary.i
 
 # target to preprocess a source file
-hello_world.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/hello_world.dir/build.make CMakeFiles/hello_world.dir/hello_world.cpp.i
-.PHONY : hello_world.cpp.i
+src/MyLibrary.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mylibrary.dir/build.make CMakeFiles/mylibrary.dir/src/MyLibrary.cpp.i
+.PHONY : src/MyLibrary.cpp.i
 
-hello_world.s: hello_world.cpp.s
-.PHONY : hello_world.s
+src/MyLibrary.s: src/MyLibrary.cpp.s
+.PHONY : src/MyLibrary.s
 
 # target to generate assembly for a file
-hello_world.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/hello_world.dir/build.make CMakeFiles/hello_world.dir/hello_world.cpp.s
-.PHONY : hello_world.cpp.s
+src/MyLibrary.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mylibrary.dir/build.make CMakeFiles/mylibrary.dir/src/MyLibrary.cpp.s
+.PHONY : src/MyLibrary.cpp.s
+
+src/hello_world.o: src/hello_world.cpp.o
+.PHONY : src/hello_world.o
+
+# target to build an object file
+src/hello_world.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/hello_world.dir/build.make CMakeFiles/hello_world.dir/src/hello_world.cpp.o
+.PHONY : src/hello_world.cpp.o
+
+src/hello_world.i: src/hello_world.cpp.i
+.PHONY : src/hello_world.i
+
+# target to preprocess a source file
+src/hello_world.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/hello_world.dir/build.make CMakeFiles/hello_world.dir/src/hello_world.cpp.i
+.PHONY : src/hello_world.cpp.i
+
+src/hello_world.s: src/hello_world.cpp.s
+.PHONY : src/hello_world.s
+
+# target to generate assembly for a file
+src/hello_world.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/hello_world.dir/build.make CMakeFiles/hello_world.dir/src/hello_world.cpp.s
+.PHONY : src/hello_world.cpp.s
 
 # Help Target
 help:
@@ -162,9 +199,13 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... hello_world"
-	@echo "... hello_world.o"
-	@echo "... hello_world.i"
-	@echo "... hello_world.s"
+	@echo "... mylibrary"
+	@echo "... src/MyLibrary.o"
+	@echo "... src/MyLibrary.i"
+	@echo "... src/MyLibrary.s"
+	@echo "... src/hello_world.o"
+	@echo "... src/hello_world.i"
+	@echo "... src/hello_world.s"
 .PHONY : help
 
 

@@ -69,31 +69,32 @@ include CMakeFiles/hello_world.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/hello_world.dir/flags.make
 
-CMakeFiles/hello_world.dir/hello_world.cpp.o: CMakeFiles/hello_world.dir/flags.make
-CMakeFiles/hello_world.dir/hello_world.cpp.o: /Users/pei/Documents/Bachelor/Uni-courses/Linux/Prak03_CMake/hello_world.cpp
-CMakeFiles/hello_world.dir/hello_world.cpp.o: CMakeFiles/hello_world.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/pei/Documents/Bachelor/Uni-courses/Linux/Prak03_CMake/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/hello_world.dir/hello_world.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/hello_world.dir/hello_world.cpp.o -MF CMakeFiles/hello_world.dir/hello_world.cpp.o.d -o CMakeFiles/hello_world.dir/hello_world.cpp.o -c /Users/pei/Documents/Bachelor/Uni-courses/Linux/Prak03_CMake/hello_world.cpp
+CMakeFiles/hello_world.dir/src/hello_world.cpp.o: CMakeFiles/hello_world.dir/flags.make
+CMakeFiles/hello_world.dir/src/hello_world.cpp.o: /Users/pei/Documents/Bachelor/Uni-courses/Linux/Prak03_CMake/src/hello_world.cpp
+CMakeFiles/hello_world.dir/src/hello_world.cpp.o: CMakeFiles/hello_world.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/pei/Documents/Bachelor/Uni-courses/Linux/Prak03_CMake/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/hello_world.dir/src/hello_world.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/hello_world.dir/src/hello_world.cpp.o -MF CMakeFiles/hello_world.dir/src/hello_world.cpp.o.d -o CMakeFiles/hello_world.dir/src/hello_world.cpp.o -c /Users/pei/Documents/Bachelor/Uni-courses/Linux/Prak03_CMake/src/hello_world.cpp
 
-CMakeFiles/hello_world.dir/hello_world.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/hello_world.dir/hello_world.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/pei/Documents/Bachelor/Uni-courses/Linux/Prak03_CMake/hello_world.cpp > CMakeFiles/hello_world.dir/hello_world.cpp.i
+CMakeFiles/hello_world.dir/src/hello_world.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/hello_world.dir/src/hello_world.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/pei/Documents/Bachelor/Uni-courses/Linux/Prak03_CMake/src/hello_world.cpp > CMakeFiles/hello_world.dir/src/hello_world.cpp.i
 
-CMakeFiles/hello_world.dir/hello_world.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/hello_world.dir/hello_world.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/pei/Documents/Bachelor/Uni-courses/Linux/Prak03_CMake/hello_world.cpp -o CMakeFiles/hello_world.dir/hello_world.cpp.s
+CMakeFiles/hello_world.dir/src/hello_world.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/hello_world.dir/src/hello_world.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/pei/Documents/Bachelor/Uni-courses/Linux/Prak03_CMake/src/hello_world.cpp -o CMakeFiles/hello_world.dir/src/hello_world.cpp.s
 
 # Object files for target hello_world
 hello_world_OBJECTS = \
-"CMakeFiles/hello_world.dir/hello_world.cpp.o"
+"CMakeFiles/hello_world.dir/src/hello_world.cpp.o"
 
 # External object files for target hello_world
 hello_world_EXTERNAL_OBJECTS =
 
-hello_world: CMakeFiles/hello_world.dir/hello_world.cpp.o
+hello_world: CMakeFiles/hello_world.dir/src/hello_world.cpp.o
 hello_world: CMakeFiles/hello_world.dir/build.make
 hello_world: /opt/anaconda3/lib/libboost_thread.dylib
 hello_world: /opt/anaconda3/lib/libboost_system.dylib
+hello_world: libmylibrary.dylib
 hello_world: CMakeFiles/hello_world.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/pei/Documents/Bachelor/Uni-courses/Linux/Prak03_CMake/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable hello_world"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/hello_world.dir/link.txt --verbose=$(VERBOSE)
