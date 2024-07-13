@@ -1,0 +1,3 @@
+Task 3.2: LaTex Makefile
+
+Write a Makefile that produces a PDF document including the bibliography
