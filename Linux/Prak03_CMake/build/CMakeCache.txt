@@ -14,6 +14,16 @@
 # EXTERNAL cache entries
 ########################
 
+//The directory containing a CMake configuration file for Boost.
+Boost_DIR:PATH=/opt/anaconda3/lib/cmake/Boost-1.82.0
+
+//Path to a file.
+Boost_INCLUDE_DIR:PATH=/opt/anaconda3/include
+
+Boost_SYSTEM_LIBRARY_RELEASE:STRING=/opt/anaconda3/lib/libboost_system.dylib
+
+Boost_THREAD_LIBRARY_RELEASE:STRING=/opt/anaconda3/lib/libboost_thread.dylib
+
 //Path to a program.
 CMAKE_ADDR2LINE:FILEPATH=CMAKE_ADDR2LINE-NOTFOUND
 
@@ -213,6 +223,15 @@ CMAKE_TAPI:FILEPATH=/Library/Developer/CommandLineTools/usr/bin/tapi
 // Studio IDE projects all commands are done without /nologo.
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
+//The directory containing a CMake configuration file for boost_headers.
+boost_headers_DIR:PATH=/opt/anaconda3/lib/cmake/boost_headers-1.82.0
+
+//The directory containing a CMake configuration file for boost_system.
+boost_system_DIR:PATH=/opt/anaconda3/lib/cmake/boost_system-1.82.0
+
+//The directory containing a CMake configuration file for boost_thread.
+boost_thread_DIR:PATH=/opt/anaconda3/lib/cmake/boost_thread-1.82.0
+
 //Value Computed by CMake
 hello_world_BINARY_DIR:STATIC=/Users/pei/Documents/Bachelor/Uni-courses/Linux/Prak03_CMake/build
 
@@ -227,6 +246,8 @@ hello_world_SOURCE_DIR:STATIC=/Users/pei/Documents/Bachelor/Uni-courses/Linux/Pr
 # INTERNAL cache entries
 ########################
 
+//ADVANCED property for variable: Boost_DIR
+Boost_DIR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_ADDR2LINE
 CMAKE_ADDR2LINE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_AR
@@ -299,6 +320,8 @@ CMAKE_GENERATOR_INSTANCE:INTERNAL=
 CMAKE_GENERATOR_PLATFORM:INTERNAL=
 //Name of generator toolset.
 CMAKE_GENERATOR_TOOLSET:INTERNAL=
+//Test CMAKE_HAVE_LIBC_PTHREAD
+CMAKE_HAVE_LIBC_PTHREAD:INTERNAL=1
 //Source directory with the top level CMakeLists.txt file for this
 // project
 CMAKE_HOME_DIRECTORY:INTERNAL=/Users/pei/Documents/Bachelor/Uni-courses/Linux/Prak03_CMake
@@ -366,4 +389,12 @@ CMAKE_TAPI-ADVANCED:INTERNAL=1
 CMAKE_UNAME:INTERNAL=/usr/bin/uname
 //ADVANCED property for variable: CMAKE_VERBOSE_MAKEFILE
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
+//Details about finding Boost
+FIND_PACKAGE_MESSAGE_DETAILS_Boost:INTERNAL=[/opt/anaconda3/lib/cmake/Boost-1.82.0/BoostConfig.cmake][cfound components: system thread ][v1.82.0()]
+//ADVANCED property for variable: boost_headers_DIR
+boost_headers_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: boost_system_DIR
+boost_system_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: boost_thread_DIR
+boost_thread_DIR-ADVANCED:INTERNAL=1
 

@@ -92,6 +92,8 @@ hello_world_EXTERNAL_OBJECTS =
 
 hello_world: CMakeFiles/hello_world.dir/hello_world.cpp.o
 hello_world: CMakeFiles/hello_world.dir/build.make
+hello_world: /opt/anaconda3/lib/libboost_thread.dylib
+hello_world: /opt/anaconda3/lib/libboost_system.dylib
 hello_world: CMakeFiles/hello_world.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/pei/Documents/Bachelor/Uni-courses/Linux/Prak03_CMake/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable hello_world"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/hello_world.dir/link.txt --verbose=$(VERBOSE)
